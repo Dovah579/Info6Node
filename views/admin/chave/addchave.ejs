@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=for, initial-scale=1.0" />
+    <title>Adicionar Chave</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+
+  <body>
+    <h1>ADICIONAR CHAVE</h1>
+    <form action="/admin/chave/addchave" method="post">
+      <label for="chave">Chave</label>
+      <input type="text" name="chave" id="chave" readonly /><br />
+
+      <input type="submit" value="Criar Chave" />
+      <a href="/admin/chave/lstchave" class="botao">Lista de Chaves</a>
+      <a href="/admin/Jogos/lstjogo" class="botao">Salvar</a>
+    </form>
+
+    <script>
+      // Função para gerar chave aleatória (formato tipo UUID simplificado)
+      function gerarChaveAleatoria() {
+        const caracteres =
+          "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        let chave = "";
+        for (let i = 0; i < 25; i++) {
+          chave += caracteres.charAt(
+            Math.floor(Math.random() * caracteres.length)
+          );
+        }
+        return chave;
+      }
+
+      // Preenche automaticamente o campo "chave" ao carregar a página
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("chave").value = gerarChaveAleatoria();
+      });
+    </script>
+  </body>
+</html>

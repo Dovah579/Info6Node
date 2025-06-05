@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chave</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+
+  <body>
+    <h1>Chaves</h1>
+
+    <table border="1">
+      <tr>
+        <th>Chaves</th>
+      </tr>
+      <% Chave.forEach(function(chave) { %>
+      <tr>
+        <td><%= chave.chave %></td>
+      </tr>
+      <% }) %>
+    </table>
+
+    <br />
+
+    <a href="/admin/chave/addchave">ADICIONAR NOVA CHAVE</a> <br />
+    <a href="/">Inicio</a>
+  </body>
+</html>

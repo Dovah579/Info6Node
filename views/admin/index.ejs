@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administração</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <style>
+      body {
+        background-image: url("/img/logo.png"); /* Caminho correto para a pasta 'img' */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .container {
+        background: rgba(28, 26, 26, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Banner Principal -->
+      <div class="banner">
+        <h1>Painel de Administração</h1>
+      </div>
+
+      <!-- Menu de Navegação -->
+      <div class="menu">
+        <div class="menu-item">
+          <a href="admin/usuario/lstusuario" class="btn">
+            <i class="fas fa-users"></i> Usuários
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="admin/jogos/lstjogo" class="btn">
+            <i class="fas fa-gamepad"></i> Jogos
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="admin/configuracoes" class="btn">
+            <i class="fas fa-cogs"></i> Configurações
+          </a>
+        </div>
+      </div>
+
+      <!-- Estatísticas Rápidas -->
+      <div class="card">
+        <h3>Total de Usuários</h3>
+        <p><%= totalusuarios %></p>
+        <!-- Exibe o total de usuários -->
+      </div>
+
+      <div class="card">
+        <h3>Total de Jogos</h3>
+        <p><%= totaljogos %></p>
+        <!-- Exibe o total de jogos -->
+      </div>
+
+      <!-- Rodapé -->
+      <footer>
+        <p>
+          &copy; 2025 Administração XXXXX-XXXX. Todos os direitos reservados.
+        </p>
+      </footer>
+    </div>
+
+    <!-- Inclusão de Font Awesome para ícones -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Jogo</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+
+  <body>
+    <h1>Editar Jogo</h1>
+
+    <form action="/admin/jogos/edtjogo/<%= jogo._id %>" method="post">
+      <!-- Campo nome -->
+      <label for="nome">Nome</label>
+      <input type="text" name="nome" id="nome" value="<%= jogo.nome %>" /><br />
+
+      <!-- Campo gênero -->
+      <label for="genero">Gênero</label>
+      <input
+        type="text"
+        name="genero"
+        id="genero"
+        value="<%= jogo.genero %>"
+      /><br />
+
+      <!-- Campo data de lançamento -->
+      <label for="datadelancamento">Data de Lançamento</label>
+      <input
+        type="date"
+        name="datadelancamento"
+        id="datadelancamento"
+        value="<%= jogo.datadelancamento.toISOString().substring(0,10) %>"
+      /><br />
+
+      <!-- Campo desenvolvedora -->
+      <label for="desenvolvedora">Desenvolvedora</label>
+      <input
+        type="text"
+        name="desenvolvedora"
+        id="desenvolvedora"
+        value="<%= jogo.desenvolvedora %>"
+      /><br />
+
+      <!-- Campo categoria -->
+      <label for="categoria">Categoria</label>
+      <input
+        type="text"
+        name="categoria"
+        id="categoria"
+        value="<%= jogo.categoria %>"
+      /><br />
+
+      <!-- Campo preço -->
+      <label for="preco">Preço</label>
+      <input
+        type="number"
+        step="0.01"
+        name="preco"
+        id="preco"
+        value="<%= jogo.preco %>"
+      /><br />
+
+      <!-- Botões de envio e voltar -->
+      <input type="submit" value="Salvar Alterações" />
+      <br />
+      <a href="/admin/jogos/lstjogo" class="botao">Voltar</a>
+    </form>
+  </body>
+</html>

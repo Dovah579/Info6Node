@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Configuração</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+
+  <body>
+    <h1>Editar Configuração</h1>
+
+    <!-- Formulário para editar a configuração -->
+    <form
+      action="/admin/configuracoes/edtconfig/<%= configuracao._id %>"
+      method="post"
+    >
+      <label for="nome">Id:</label>
+      <input
+        type="text"
+        name="nome"
+        id="nome"
+        value="<%= configuracao.nome %>"
+        required
+      /><br />
+
+      <label for="valor">Configuração:</label>
+      <input
+        type="text"
+        name="valor"
+        id="valor"
+        value="<%= configuracao.valor %>"
+        required
+      /><br />
+
+      <label for="descricao">Ações:</label>
+      <input
+        type="text"
+        name="descricao"
+        id="descricao"
+        value="<%= configuracao.descricao %>"
+      /><br />
+
+      <input type="submit" value="Salvar" />
+
+      <br />
+      <a href="/admin/config" class="botao">Voltar</a>
+    </form>
+  </body>
+</html>

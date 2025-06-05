@@ -1,0 +1,47 @@
+<!-- views/admin/configuracoes/addconfig.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionar Configuração</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>Adicionar Configuração</h1>
+
+    <form action="/admin/configuracoes/addconfig" method="POST">
+      <label for="nome">Id:</label>
+      <input type="text" id="nome" name="nome" required />
+      <label for="Usuario"></label>
+
+      <div>
+        <label for="tipoConfiguracao">Configuração:</label>
+        <select name="tipoConfiguracao" id="tipoConfiguracao">
+          <option value="venda">Venda de Jogos</option>
+          <option value="permissoes">Permissões</option>
+          <option value="modiSenha">Modificar Senha</option>
+          <option value="personalizacao">Personalização</option>
+        </select>
+      </div>
+      <div>
+        <label for="Usuario"></label>
+        <select name="Usuario" id="usuario">
+          <option value="usuario">ADMIN</option>
+          <option value="usuario">Public</option>
+        </select>
+      </div>
+
+      <label for="descricao">Ações:</label>
+      <input type="text" id="descricao" name="descricao" />
+
+      <button type="submit">Salvar</button>
+    </form>
+
+    <div class="opcoes">
+      <a href="/admin/configuracoes" class="botao"
+        >Voltar para a lista de configurações</a
+      >
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogos</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+
+  <body>
+    <h1>Jogos</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Chave</th>
+          <th>Nome</th>
+          <th>Desenvolvedora</th>
+          <th>Preço</th>
+          <th>Data de Lançamento</th>
+          <th>Opções</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% Jogos.forEach(function(jogo) { %>
+        <tr>
+          <td><%= jogo.chave %></td>
+          <td><%= jogo.nome %></td>
+          <td><%= jogo.desenvolvedora %></td>
+          <td><%= jogo.preco %></td>
+          <td><%= jogo.datadelancamento %></td>
+          <td>
+            <a class="btn" href="/admin/Jogos/edtjogo/<%= jogo._id %>"
+              >Editar</a
+            >
+            |
+            <a class="btn" href="/admin/Jogos/deljogo/<%= jogo._id %>"
+              >Excluir</a
+            >
+            |
+            <a class="btn" href="/admin/chave/addchave">Chaves</a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <div class="opcoes">
+      <a class="btn" href="/admin/Jogos/addjogo">ADICIONAR NOVO JOGO</a>
+      <a class="btn" href="/">Início</a>
+    </div>
+  </body>
+</html>

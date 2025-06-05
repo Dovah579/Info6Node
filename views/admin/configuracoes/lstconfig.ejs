@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Configurações</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+
+  <body>
+    <h1>Lista de Configurações</h1>
+
+    <!-- Tabela exibindo as configurações -->
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Configuração</th>
+        <th>Ações</th>
+      </tr>
+
+      <% Configuracoes.forEach(function(config) { %>
+      <tr>
+        <td><%= config.id %></td>
+        <td><%= config.configuracao %></td>
+        <td>
+          <!-- Links de ação para editar ou excluir -->
+          <a href="/admin/config/edit/<%= config.id %>">Editar</a> |
+          <a href="/admin/config/delete/<%= config.id %>">Excluir</a>
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+
+    <br />
+
+    <!-- Links para adicionar novas configurações ou voltar à página inicial -->
+    <a href="/admin/configuracoes/addconfig">ADICIONAR NOVA CONFIGURAÇÃO</a
+    ><br />
+    <a href="/">Voltar à Página Inicial</a>
+  </body>
+</html>

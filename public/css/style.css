@@ -1,0 +1,162 @@
+/* Reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilização do corpo da página */
+body {
+    background-color: #121212;  /* Cor de fundo mais escura para um tom mais sóbrio */
+    color: #e0e0e0;  /* Cor de texto suave para contraste */
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+}
+
+/* Cabeçalhos */
+h1 {
+    color: #ff4c4c;  /* Vermelho vibrante para destaque */
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 600;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8); /* Sombra para maior destaque */
+}
+
+/* Formulário */
+form {
+    background: #2a2a2a;  /* Fundo um pouco mais claro que o fundo da página */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+    display: inline-block;
+    text-align: left;
+    border: 1px solid #ff4c4c;  /* Borda vermelha para destaque */
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.03); /* Leve efeito de zoom ao passar o mouse */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo dos labels */
+label {
+    font-weight: 500;
+    display: block;
+    margin-top: 15px;
+    color: #f4a261;  /* Dourado suave */
+    font-size: 14px;
+}
+
+/* Estilização dos inputs e selects */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ff4c4c;  /* Borda vermelha */
+    border-radius: 8px;
+    background: #333333;  /* Fundo mais escuro */
+    color: #f0f0f0;
+    font-size: 16px;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    background: #444444;  /* Fundo mais suave no foco */
+    border-color: #f4a261;  /* Cor dourada ao focar */
+    outline: none;
+}
+
+/* Botão */
+button, .botao {
+    display: inline-block;
+    background-color: #ff4c4c;  /* Cor vermelha vibrante */
+    color: #1a1a1a;
+    padding: 14px 24px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .botao:hover {
+    background-color: #e53935;  /* Tom de vermelho mais escuro */
+    transform: translateY(-3px);  /* Efeito de levitação */
+}
+
+button:active, .botao:active {
+    transform: translateY(1px);  /* Leve "afundamento" no clique */
+}
+
+/* Tabela */
+table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background: #2c2c2c;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+    color: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 18px;
+    border: 1px solid #ff4c4c;  /* Borda vermelha nas células */
+    text-align: left;
+}
+
+th {
+    background: #ff4c4c;  /* Cabeçalhos vermelhos */
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+tr:nth-child(even) {
+    background: #333333;  /* Linhas alternadas mais escuras */
+}
+
+tr:hover {
+    background: #444444;  /* Cor de fundo escura ao passar o mouse */
+    transform: scale(1.02);
+    transition: background 0.3s ease;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #f4a261;  /* Cor dourada suave para links */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff4c4c;  /* Cor vermelha no hover */
+}
+
+/* Container de botões */
+.opcoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Ajustes para garantir acessibilidade e clareza */
+input, select, button {
+    border-radius: 8px;
+}
+
+button, .botao {
+    text-transform: uppercase;  /* Maiúsculas nos botões para destacar */
+}
